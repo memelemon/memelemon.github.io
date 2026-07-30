@@ -229,8 +229,6 @@ h2{
 
 }
 /* SOCIAL PAGE */
-/* SOCIAL PAGE */
-
 
 .social-page{
 
@@ -240,27 +238,24 @@ h2{
     background:#315FC2;
 
     padding-left:8vw;
-    padding-top:6vh;
-
-    overflow:hidden;
+    padding-top:5vh;
 
 }
-
 
 
 .social-title{
 
     font-family:"IBM Plex Mono",monospace;
 
-    font-size:clamp(120px,18vw,360px);
-
-    font-weight:400;
+    font-size:clamp(130px,20vw,400px);
 
     color:white;
 
-    letter-spacing:-0.08em;
+    letter-spacing:-0.09em;
 
-    line-height:0.8;
+    line-height:0.75;
+
+    white-space:nowrap;
 
 }
 
@@ -268,13 +263,13 @@ h2{
 
 .social-links{
 
-    margin-top:8vh;
+    margin-top:10vh;
 
     display:flex;
 
     flex-direction:column;
 
-    gap:2.5vh;
+    gap:3vh;
 
 }
 
@@ -282,15 +277,9 @@ h2{
 
 .social-links a{
 
-    display:inline-block;
-
-    width:max-content;
-
     font-family:"IBM Plex Mono",monospace;
 
-    font-size:clamp(45px,5vw,100px);
-
-    font-weight:400;
+    font-size:clamp(50px,6vw,120px);
 
     color:white;
 
@@ -298,7 +287,9 @@ h2{
 
     letter-spacing:-0.05em;
 
-    transition:.25s ease;
+    display:block;
+
+    transition:transform .3s ease, opacity .3s ease;
 
 }
 
@@ -306,9 +297,8 @@ h2{
 
 .social-links a:hover{
 
-    transform:translateX(30px);
+    transform:translateX(40px);
 
-    color:#D0D0D0;
+    opacity:.6;
 
-}
 }
