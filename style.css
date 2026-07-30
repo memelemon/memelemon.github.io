@@ -9,16 +9,29 @@ html{
 }
 
 body{
+
     background:#315FC2;
     color:white;
-    overflow-x:hidden;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
 }
 
 .hero{
 
-    min-height:100vh;
+    width:min(100vw,177.78vh);
 
-    padding:4vw;
+    aspect-ratio:16 / 9;
+
+    margin:auto;
+
+    padding:2.5vw;
 
     display:flex;
     flex-direction:column;
