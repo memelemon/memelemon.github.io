@@ -237,23 +237,24 @@ h2{
 
     background:#315FC2;
 
-    padding-left:8vw;
+    padding-left:6vw;
     padding-top:5vh;
 
 }
+
 
 
 .social-title{
 
     font-family:"IBM Plex Mono",monospace;
 
-    font-size:clamp(130px,20vw,400px);
+    font-size:clamp(70px,10vw,180px);
 
     color:white;
 
-    letter-spacing:-0.09em;
+    letter-spacing:-0.08em;
 
-    line-height:0.75;
+    line-height:0.8;
 
     white-space:nowrap;
 
@@ -263,13 +264,13 @@ h2{
 
 .social-links{
 
-    margin-top:10vh;
+    margin-top:6vh;
 
     display:flex;
 
     flex-direction:column;
 
-    gap:3vh;
+    gap:1.8vh;
 
 }
 
@@ -279,7 +280,7 @@ h2{
 
     font-family:"IBM Plex Mono",monospace;
 
-    font-size:clamp(50px,6vw,120px);
+    font-size:clamp(28px,3vw,65px);
 
     color:white;
 
@@ -289,7 +290,7 @@ h2{
 
     display:block;
 
-    transition:transform .3s ease, opacity .3s ease;
+    transition:transform .25s ease, opacity .25s ease;
 
 }
 
@@ -297,8 +298,8 @@ h2{
 
 .social-links a:hover{
 
-    transform:translateX(40px);
+    transform:translateX(20px);
 
-    opacity:.6;
+    opacity:.7;
 
 }
