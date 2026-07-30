@@ -238,21 +238,28 @@ h2{
 
     background:#315FC2;
 
-    padding-left:3vw;
-    padding-top:8vh;
+    padding-left:8vw;
+    padding-top:6vh;
+
+    overflow:hidden;
 
 }
+
 
 
 .social-title{
 
     font-family:"IBM Plex Mono",monospace;
 
-    font-size:clamp(80px,12vw,220px);
+    font-size:clamp(120px,18vw,360px);
+
+    font-weight:400;
 
     color:white;
 
-    letter-spacing:-0.06em;
+    letter-spacing:-0.08em;
+
+    line-height:0.8;
 
 }
 
@@ -260,13 +267,13 @@ h2{
 
 .social-links{
 
-    margin-top:5vh;
+    margin-top:8vh;
 
     display:flex;
 
     flex-direction:column;
 
-    gap:2vh;
+    gap:2.5vh;
 
 }
 
@@ -274,15 +281,21 @@ h2{
 
 .social-links a{
 
-    font-family:"Inter",sans-serif;
+    display:inline-block;
 
-    font-size:clamp(35px,4vw,80px);
+    width:max-content;
 
-    font-weight:300;
+    font-family:"IBM Plex Mono",monospace;
 
-    color:#D0D0D0;
+    font-size:clamp(45px,5vw,100px);
+
+    font-weight:400;
+
+    color:white;
 
     text-decoration:none;
+
+    letter-spacing:-0.05em;
 
     transition:.25s ease;
 
@@ -292,9 +305,9 @@ h2{
 
 .social-links a:hover{
 
-    color:white;
+    transform:translateX(30px);
 
-    transform:translateX(20px);
+    color:#D0D0D0;
 
 }
 }
