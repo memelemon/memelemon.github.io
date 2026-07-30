@@ -201,13 +201,13 @@ h2{
 }
 
 h1{
-
     font-size:22vw;
 
     white-space:normal;
 
     line-height:.9;
 
+    transform:translateY(0);
 }
 
 h2{
