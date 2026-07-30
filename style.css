@@ -94,11 +94,13 @@ h1{
 
     white-space:nowrap;
 
+    transform:translateY(2vh);
+
 }
 
 h2{
 
-    margin-top:2vh;
+    margin-top:5vh;
 
     font-family:"Inter",sans-serif;
 
@@ -111,7 +113,6 @@ h2{
     letter-spacing:-0.02em;
 
 }
-
 /* ---------------------------- */
 
 .socialButton{
