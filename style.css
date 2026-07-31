@@ -166,16 +166,16 @@ h2{
 
     position:fixed;
 
-    right:2vw;
-    top:2vh;
+    right:2.5vw;
+    bottom:3vh;
 
     display:flex;
     align-items:center;
-    gap:.6rem;
+    gap:1.2rem;
 
-    z-index:999;
+    z-index:1000;
 
-    opacity:.65;
+    opacity:.75;
 
     transition:.25s;
 
@@ -189,8 +189,10 @@ h2{
 
 .eye-icon{
 
-    width:38px;
+    width:90px;
     height:auto;
+
+    flex-shrink:0;
 
 }
 
@@ -198,9 +200,13 @@ h2{
 
     font-family:"Inter",sans-serif;
 
-    font-size:20px;
+    font-size:42px;
+
+    font-weight:300;
 
     color:#9EA8CA;
+
+    letter-spacing:-0.03em;
 
     user-select:none;
 
