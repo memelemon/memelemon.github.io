@@ -162,7 +162,49 @@ h2{
     color:#315FC2;
 
 }
+.visitor-counter{
 
+    position:fixed;
+
+    right:2vw;
+    top:2vh;
+
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+
+    z-index:999;
+
+    opacity:.65;
+
+    transition:.25s;
+
+}
+
+.visitor-counter:hover{
+
+    opacity:1;
+
+}
+
+.eye-icon{
+
+    width:38px;
+    height:auto;
+
+}
+
+#visitorCount{
+
+    font-family:"Inter",sans-serif;
+
+    font-size:20px;
+
+    color:#9EA8CA;
+
+    user-select:none;
+
+}
 /* ---------------------------- */
 
 @media(max-width:900px){
