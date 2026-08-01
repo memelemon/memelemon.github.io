@@ -49,24 +49,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<script>
 
-fetch("https://api.countapi.xyz/hit/memelemon/home")
-.then(response => response.json())
-.then(data => {
-
-    document.getElementById("visitorCount").textContent = data.value;
-
-})
-.catch(error => {
-
-    console.error(error);
-
-    document.getElementById("visitorCount").textContent = "?";
-
-});
-
-</script>
 <body>
 
     <main class="hero">
@@ -131,7 +114,5 @@ fetch("https://api.countapi.xyz/hit/memelemon/home")
     <span id="visitorCount">0</span>
 
 </div>
-<div>
-  Посетителей: <span id="visitors">0</span>
-</div>
+
 </html>
