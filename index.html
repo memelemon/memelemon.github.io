@@ -49,50 +49,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<div class="visitor-counter">
 
-    <svg class="eye-icon" viewBox="0 0 598 356" xmlns="http://www.w3.org/2000/svg">
-
-        <path
-            d="M295.402 11.6731L19.4023 179.673L295.402 343.673L577.402 179.673L295.402 11.6731Z"
-            stroke="#9EA8CA"
-            stroke-width="20"
-            fill="none"/>
-
-        <path
-            d="M403.306 87.6731L340.402 178.384L403.306 277.673L469.402 178.384L403.306 87.6731Z"
-            fill="#9EA8CA"
-            stroke="#9EA8CA"
-            stroke-width="15"/>
-
-    </svg>
-
-    <span id="visitorCount">0</span>
-
-</div>
-
-<!-- VisitorBadge -->
-<div id="visitorBadge" style="display:none;"></div>
-
-<script async src="https://visitorbadge.io/js?path=https%3A%2F%2Fmemelemon.github.io"></script>
-
-<script>
-
-const interval = setInterval(() => {
-
-    const badge = document.querySelector(".vb_total");
-
-    if(badge){
-
-        document.getElementById("visitorCount").textContent = badge.textContent;
-
-        clearInterval(interval);
-
-    }
-
-},300);
-
-</script>
 <body>
 
     <main class="hero">
