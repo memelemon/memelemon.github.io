@@ -1,354 +1,670 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,body{
-    width:100%;
-    height:100%;
+html,
+body {
+    width: 100%;
+    min-height: 100%;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
 
-    background:#315FC2;
+body {
 
-    overflow:hidden;
+    background: #315FC2;
 
-    font-family:"Inter",sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    font-family: "Inter", sans-serif;
 
 }
+
 
 /* ---------------------------- */
-
-.hero{
-
-    position:relative;
-
-    width:100vw;
-    height:100vh;
-
-}
-
+/* HERO */
 /* ---------------------------- */
 
-.about{
+.hero {
 
-    position:absolute;
+    position: relative;
 
-    top:4.5vh;
-    right:4vw;
+    width: 100vw;
 
-}
+    /*
+        Первый холст теперь длиннее обычного экрана.
+        Контент остаётся наверху,
+        а снизу появляется большое пустое пространство.
+    */
 
-.about p{
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-size:clamp(18px,1.7vw,34px);
-
-    line-height:1.25;
-
-    color:#9EA8CA;
+    min-height: 140vh;
 
 }
+
 
 /* ---------------------------- */
-
-.title{
-
-    position:absolute;
-
-    left:3vw;
-    top:8vh;
-
-}
-
-.im{
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-size:clamp(60px,8vw,150px);
-
-    color:white;
-
-    letter-spacing:-0.05em;
-
-    line-height:0.85;
-
-}
-
-h1{
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-weight:400;
-
-    font-size:clamp(120px,15vw,330px);
-
-    letter-spacing:-0.06em;
-
-    line-height:0.82;
-
-    color:white;
-
-    white-space:nowrap;
-
-    transform:translateY(2vh);
-
-}
-
-h2{
-
-    margin-top:8vh;
-
-    font-family:"Inter",sans-serif;
-
-    font-weight:300;
-
-    font-size:clamp(24px,2.5vw,58px);
-
-    color:#D0D0D0;
-
-    letter-spacing:-0.02em;
-
-}
+/* ABOUT */
 /* ---------------------------- */
 
-.socialButton{
+.about {
 
-    position:absolute;
+    position: absolute;
 
-    left:3vw;
-    bottom:4vh;
-
-    text-decoration:none;
-
-    font-family:"Inter",sans-serif;
-
-    font-size:clamp(26px,2.4vw,55px);
-
-    color:#1B91FF;
-
-    transition:.2s ease;
+    top: 4.5vh;
+    right: 4vw;
 
 }
 
-.socialButton span{
+.about p {
 
-    color:#57AEFF;
+    font-family: "IBM Plex Mono", monospace;
 
-}
+    font-size: clamp(18px, 1.7vw, 34px);
 
-.socialButton:hover{
+    line-height: 1.25;
 
-    color:white;
-
-    transform:translateX(10px);
+    color: #9EA8CA;
 
 }
 
-.socialButton:hover span{
-
-    color:white;
-
-}
 
 /* ---------------------------- */
-
-::selection{
-
-    background:white;
-    color:#315FC2;
-
-}
-.visitor-counter{
-
-    position:fixed;
-
-    right:2.5vw;
-    bottom:3vh;
-
-    display:flex;
-    align-items:center;
-    gap:1.2rem;
-
-    z-index:1000;
-
-    opacity:.75;
-
-    transition:.25s;
-
-}
-
-.visitor-counter:hover{
-
-    opacity:1;
-
-}
-
-.eye-icon{
-
-    width:90px;
-    height:auto;
-
-    flex-shrink:0;
-
-}
-
-#visitorCount{
-
-    font-family:"Inter",sans-serif;
-
-    font-size:42px;
-
-    font-weight:300;
-
-    color:#9EA8CA;
-
-    letter-spacing:-0.03em;
-
-    user-select:none;
-
-}
+/* TITLE */
 /* ---------------------------- */
 
-@media(max-width:900px){
+.title {
 
-.hero{
+    position: absolute;
 
-    padding:0;
-
-}
-
-.about{
-
-    left:6vw;
-    right:auto;
-    top:6vw;
+    left: 3vw;
+    top: 8vh;
 
 }
 
-.about p{
+.im {
 
-    font-size:4vw;
+    font-family: "IBM Plex Mono", monospace;
 
-}
+    font-size: clamp(60px, 8vw, 150px);
 
-.title{
+    color: white;
 
-    left:6vw;
-    top:18vh;
+    letter-spacing: -0.05em;
 
-}
-
-.im{
-
-    font-size:14vw;
+    line-height: 0.85;
 
 }
 
-h1{
-    font-size:22vw;
+h1 {
 
-    white-space:normal;
+    font-family: "IBM Plex Mono", monospace;
 
-    line-height:.9;
+    font-weight: 400;
 
-    transform:translateY(0);
-}
+    font-size: clamp(120px, 15vw, 330px);
 
-h2{
+    letter-spacing: -0.06em;
 
-    font-size:5vw;
+    line-height: 0.82;
 
-    margin-top:8vw;
+    color: white;
 
-}
+    white-space: nowrap;
 
-.socialButton{
-
-    left:6vw;
-
-    bottom:7vw;
-
-    font-size:6vw;
+    transform: translateY(2vh);
 
 }
+
+h2 {
+
+    margin-top: 8vh;
+
+    font-family: "Inter", sans-serif;
+
+    font-weight: 300;
+
+    font-size: clamp(24px, 2.5vw, 58px);
+
+    color: #D0D0D0;
+
+    letter-spacing: -0.02em;
+
 }
+
+
+/* ---------------------------- */
+/* SOCIAL BUTTON */
+/* ---------------------------- */
+
+.socialButton {
+
+    position: absolute;
+
+    left: 3vw;
+    bottom: 4vh;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(26px, 2.4vw, 55px);
+
+    color: #1B91FF;
+
+    transition: .2s ease;
+
+}
+
+.socialButton span {
+
+    color: #57AEFF;
+
+}
+
+.socialButton:hover {
+
+    color: white;
+
+    transform: translateX(10px);
+
+}
+
+.socialButton:hover span {
+
+    color: white;
+
+}
+
+
+/* ---------------------------- */
+/* MMLMN.SYS */
+/* ---------------------------- */
+
+.bot-section {
+
+    position: relative;
+
+    width: 100vw;
+
+    min-height: 100vh;
+
+    padding: 15vh 8vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3vw;
+
+}
+
+
+/* ---------------------------- */
+/* BOT AVATAR */
+/* ---------------------------- */
+
+.bot-avatar {
+
+    width: clamp(110px, 11vw, 180px);
+
+    height: clamp(110px, 11vw, 180px);
+
+    flex-shrink: 0;
+
+    position: relative;
+
+}
+
+.bot-avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* ---------------------------- */
+/* BOT WINDOW */
+/* ---------------------------- */
+
+.bot-window {
+
+    width: min(700px, 70vw);
+
+    min-height: 500px;
+
+    border: 1px solid #9EA8CA;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #315FC2;
+
+}
+
+
+/* ---------------------------- */
+/* BOT HEADER */
+/* ---------------------------- */
+
+.bot-header {
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #9EA8CA;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 16px;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.bot-status {
+
+    font-size: 11px;
+
+    color: #9EA8CA;
+
+    letter-spacing: .05em;
+
+}
+
+
+/* ---------------------------- */
+/* BOT MESSAGES */
+/* ---------------------------- */
+
+.bot-messages {
+
+    flex: 1;
+
+    padding: 35px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    color: white;
+
+}
+
+.bot-message {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ---------------------------- */
+/* BOT INPUT */
+/* ---------------------------- */
+
+.bot-input {
+
+    border-top: 1px solid #9EA8CA;
+
+    padding: 18px 22px;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 14px;
+
+    color: #9EA8CA;
+
+}
+
+
+/* ---------------------------- */
+/* SELECTION */
+/* ---------------------------- */
+
+::selection {
+
+    background: white;
+
+    color: #315FC2;
+
+}
+
+
+/* ---------------------------- */
+/* VISITOR COUNTER */
+/* ---------------------------- */
+
+.visitor-counter {
+
+    position: fixed;
+
+    right: 2.5vw;
+    bottom: 3vh;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.2rem;
+
+    z-index: 1000;
+
+    opacity: .75;
+
+    transition: .25s;
+
+}
+
+.visitor-counter:hover {
+
+    opacity: 1;
+
+}
+
+.eye-icon {
+
+    width: 90px;
+
+    height: auto;
+
+    flex-shrink: 0;
+
+}
+
+#visitorCount {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 300;
+
+    color: #9EA8CA;
+
+    letter-spacing: -0.03em;
+
+    user-select: none;
+
+}
+
+
+/* ---------------------------- */
+/* MOBILE */
+/* ---------------------------- */
+
+@media (max-width: 900px) {
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 125vh;
+
+        padding: 0;
+
+    }
+
+
+    /* ABOUT */
+
+    .about {
+
+        left: 6vw;
+
+        right: auto;
+
+        top: 6vw;
+
+    }
+
+    .about p {
+
+        font-size: 4vw;
+
+    }
+
+
+    /* TITLE */
+
+    .title {
+
+        left: 6vw;
+
+        top: 18vh;
+
+    }
+
+    .im {
+
+        font-size: 14vw;
+
+    }
+
+    h1 {
+
+        font-size: 22vw;
+
+        white-space: normal;
+
+        line-height: .9;
+
+        transform: translateY(0);
+
+    }
+
+    h2 {
+
+        font-size: 5vw;
+
+        margin-top: 8vw;
+
+    }
+
+
+    /* SOCIAL BUTTON */
+
+    .socialButton {
+
+        left: 6vw;
+
+        bottom: 7vw;
+
+        font-size: 6vw;
+
+    }
+
+
+    /* BOT SECTION */
+
+    .bot-section {
+
+        min-height: 100vh;
+
+        padding: 15vh 6vw 20vh;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+    }
+
+
+    /* BOT AVATAR */
+
+    .bot-avatar {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+
+    /* BOT WINDOW */
+
+    .bot-window {
+
+        width: 100%;
+
+        min-height: 450px;
+
+    }
+
+
+    /* BOT HEADER */
+
+    .bot-header {
+
+        padding: 15px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* BOT MESSAGES */
+
+    .bot-messages {
+
+        padding: 25px;
+
+        font-size: 16px;
+
+    }
+
+
+    /* BOT INPUT */
+
+    .bot-input {
+
+        padding: 15px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* COUNTER */
+
+    .visitor-counter {
+
+        right: 4vw;
+
+        bottom: 3vw;
+
+        gap: .7rem;
+
+    }
+
+    .eye-icon {
+
+        width: 55px;
+
+    }
+
+    #visitorCount {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+/* ---------------------------- */
 /* SOCIAL PAGE */
+/* ---------------------------- */
 
-.social-page{
+.social-page {
 
-    width:100vw;
-    height:100vh;
+    width: 100vw;
 
-    background:#315FC2;
+    min-height: 100vh;
 
-    padding-left:6vw;
-    padding-top:5vh;
+    background: #315FC2;
 
-}
+    padding-left: 6vw;
 
-
-
-.social-title{
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-size:clamp(70px,10vw,180px);
-
-    color:white;
-
-    letter-spacing:-0.08em;
-
-    line-height:0.8;
-
-    white-space:nowrap;
+    padding-top: 5vh;
 
 }
 
 
+.social-title {
 
-.social-links{
+    font-family: "IBM Plex Mono", monospace;
 
-    margin-top:6vh;
+    font-size: clamp(70px, 10vw, 180px);
 
-    display:flex;
+    color: white;
 
-    flex-direction:column;
+    letter-spacing: -0.08em;
 
-    gap:1.8vh;
+    line-height: 0.8;
 
-}
-
-
-
-.social-links a{
-
-    font-family:"IBM Plex Mono",monospace;
-
-    font-size:clamp(28px,3vw,65px);
-
-    color:white;
-
-    text-decoration:none;
-
-    letter-spacing:-0.05em;
-
-    display:block;
-
-    transition:transform .25s ease, opacity .25s ease;
+    white-space: nowrap;
 
 }
 
 
+.social-links {
 
-.social-links a:hover{
+    margin-top: 6vh;
 
-    transform:translateX(20px);
+    display: flex;
 
-    opacity:.7;
+    flex-direction: column;
+
+    gap: 1.8vh;
 
 }
 
+
+.social-links a {
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: clamp(28px, 3vw, 65px);
+
+    color: white;
+
+    text-decoration: none;
+
+    letter-spacing: -0.05em;
+
+    display: block;
+
+    transition: transform .25s ease, opacity .25s ease;
+
+}
+
+
+.social-links a:hover {
+
+    transform: translateX(20px);
+
+    opacity: .7;
+
+}
