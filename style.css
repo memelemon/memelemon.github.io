@@ -568,75 +568,78 @@ h2 {
 
     .bot-section {
 
-        min-height: 100vh;
+    min-height: 100vh;
 
-        padding: 15vh 6vw 20vh;
+    padding: 15vh 6vw 20vh;
 
-        flex-direction: column;
+    flex-direction: column;
 
-        justify-content: center;
+    align-items: flex-start;
 
-        align-items: flex-start;
+    justify-content: center;
 
-        gap: 30px;
+    gap: 60px;
 
-    }
-
-
-    /* BOT AVATAR */
-
-    .bot-avatar {
-
-        width: 100px;
-
-        height: 100px;
-
-    }
+}
 
 
-    /* BOT WINDOW */
+.bot-content {
 
-    .bot-window {
+    width: 100%;
 
-        width: 100%;
+    flex-direction: column;
 
-        min-height: 450px;
+    align-items: flex-start;
 
-    }
+    gap: 25px;
 
-
-    /* BOT HEADER */
-
-    .bot-header {
-
-        padding: 15px;
-
-        font-size: 14px;
-
-    }
+}
 
 
-    /* BOT MESSAGES */
+.bot-avatar {
 
-    .bot-messages {
+    width: 100px;
 
-        padding: 25px;
+    height: 100px;
 
-        font-size: 16px;
-
-    }
+}
 
 
-    /* BOT INPUT */
+.bot-window {
 
-    .bot-input {
+    width: 100%;
 
-        padding: 15px;
+    min-height: 450px;
 
-        font-size: 12px;
+}
 
-    }
 
+.bot-info {
+
+    max-width: 100%;
+
+}
+
+
+.bot-info-title {
+
+    font-size: 12vw;
+
+}
+
+
+.bot-info-text {
+
+    font-size: 5vw;
+
+}
+
+
+.bot-username {
+
+    font-size: 6vw;
+
+}
 
     /* COUNTER */
 
