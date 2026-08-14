@@ -215,7 +215,200 @@
 
 
     <script src="visitors.js"></script>
+<script>
 
+const BOT_WORKER_URL =
+    "https://ТВОЙ-WORKER.workers.dev/webchat";
+
+
+const botForm =
+    document.getElementById("botForm");
+
+const botInput =
+    document.getElementById("botInput");
+
+const botMessages =
+    document.getElementById("botMessages");
+
+
+let sessionId =
+    localStorage.getItem("mmlmn_web_session");
+
+
+if (!sessionId) {
+
+    sessionId =
+        crypto.randomUUID();
+
+    localStorage.setItem(
+        "mmlmn_web_session",
+        sessionId
+    );
+
+}
+
+
+function addMessage(
+    text,
+    type
+) {
+
+    const message =
+        document.createElement("div");
+
+
+    message.className =
+        `bot-message bot-message-${type}`;
+
+
+    message.textContent =
+        text;
+
+
+    botMessages.appendChild(
+        message
+    );
+
+
+    botMessages.scrollTop =
+        botMessages.scrollHeight;
+
+}
+
+
+botForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        const text =
+            botInput.value.trim();
+
+
+        if (!text) {
+            return;
+        }
+
+
+        addMessage(
+            text,
+            "user"
+        );
+
+
+        botInput.value = "";
+
+        botInput.disabled = true;
+
+
+        const loading =
+            document.createElement("div");
+
+
+        loading.className =
+            "bot-message bot-message-model";
+
+
+        loading.textContent =
+            "...";
+
+
+        botMessages.appendChild(
+            loading
+        );
+
+
+        botMessages.scrollTop =
+            botMessages.scrollHeight;
+
+
+        try {
+
+            const response =
+                await fetch(
+                    BOT_WORKER_URL,
+                    {
+
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body: JSON.stringify({
+
+                            sessionId:
+                                sessionId,
+
+                            message:
+                                text
+
+                        })
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            loading.remove();
+
+
+            if (
+                !response.ok ||
+                !data.reply
+            ) {
+
+                addMessage(
+                    "что-то пошло не так.",
+                    "model"
+                );
+
+                return;
+
+            }
+
+
+            addMessage(
+                data.reply,
+                "model"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            loading.remove();
+
+
+            addMessage(
+                "связь с моей прекрасной системой куда-то исчезла.",
+                "model"
+            );
+
+        } finally {
+
+            botInput.disabled =
+                false;
+
+            botInput.focus();
+
+        }
+
+    }
+
+);
+
+</script>
 </body>
 
 </html>
