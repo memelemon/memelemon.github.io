@@ -146,7 +146,7 @@ h2 {
     position: absolute;
 
     left: 3vw;
-    bottom: 4vh;
+    bottom: 12vh;
 
     text-decoration: none;
 
@@ -193,15 +193,30 @@ h2 {
 
     min-height: 100vh;
 
-    padding: 15vh 8vw;
+    padding: 15vh 5vw;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: center;
+    justify-content: flex-start;
 
-    gap: 3vw;
+    gap: 7vw;
+
+}
+
+
+/* ---------------------------- */
+/* BOT CONTENT */
+/* ---------------------------- */
+
+.bot-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2vw;
 
 }
 
@@ -212,13 +227,11 @@ h2 {
 
 .bot-avatar {
 
-    width: clamp(110px, 11vw, 180px);
+    width: clamp(100px, 10vw, 170px);
 
-    height: clamp(110px, 11vw, 180px);
+    height: clamp(100px, 10vw, 170px);
 
     flex-shrink: 0;
-
-    position: relative;
 
 }
 
@@ -240,7 +253,7 @@ h2 {
 
 .bot-window {
 
-    width: min(700px, 70vw);
+    width: min(620px, 55vw);
 
     min-height: 500px;
 
@@ -335,17 +348,76 @@ h2 {
 
 
 /* ---------------------------- */
-/* SELECTION */
+/* BOT INFO */
 /* ---------------------------- */
 
-::selection {
+.bot-info {
 
-    background: white;
+    max-width: 350px;
 
-    color: #315FC2;
+    align-self: center;
 
 }
 
+
+.bot-info-title {
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: clamp(35px, 4vw, 70px);
+
+    color: white;
+
+    letter-spacing: -0.06em;
+
+    line-height: .9;
+
+    margin-bottom: 35px;
+
+}
+
+
+.bot-info-text {
+
+    font-family: "Inter", sans-serif;
+
+    font-weight: 300;
+
+    font-size: clamp(20px, 1.7vw, 32px);
+
+    line-height: 1.25;
+
+    color: #D0D0D0;
+
+}
+
+
+.bot-username {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: clamp(22px, 2vw, 38px);
+
+    color: #1B91FF;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+
+}
+
+
+.bot-username:hover {
+
+    color: white;
+
+    transform: translateX(10px);
+
+}
 
 /* ---------------------------- */
 /* VISITOR COUNTER */
