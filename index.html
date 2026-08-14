@@ -113,30 +113,43 @@
                 </span>
 
                 <span class="bot-status">
-                    ● ONLINE
+                    ● DEVELOPMENT
                 </span>
 
             </div>
 
 
-            <div class="bot-messages">
+            <div
+                class="bot-messages"
+                id="botMessages">
 
-                <div class="bot-message">
+                <div class="bot-message bot-message-model">
                     привет.
                 </div>
 
-                <div class="bot-message">
+                <div class="bot-message bot-message-model">
                     я MMLMN.sys
                 </div>
 
             </div>
 
 
-            <div class="bot-input">
+            <form
+                class="bot-input"
+                id="botForm">
 
-                Написать сообщение...
+                <input
+                    id="botInput"
+                    type="text"
+                    placeholder="Написать сообщение..."
+                    autocomplete="off">
 
-            </div>
+                <button
+                    type="submit">
+                    →
+                </button>
+
+            </form>
 
         </div>
 
@@ -150,6 +163,7 @@
         </div>
 
         <div class="bot-info-text">
+
             бот в разработке.
             <br>
             его можно добавить
@@ -157,13 +171,17 @@
             в свой чат,
             <br>
             а можно болтать лично
+
         </div>
+
 
         <a
             class="bot-username"
             href="https://t.me/memelemonbot"
             target="_blank">
+
             @memelemonbot
+
         </a>
 
     </div>
