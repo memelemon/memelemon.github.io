@@ -20,259 +20,7 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <style>
-        :root {
-            --blue: #315FC2;
-            --white: #ffffff;
-            --black: #111111;
-            --gray: #888888;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: var(--white);
-            color: var(--blue);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .page {
-            width: 100%;
-            padding: 35px 5%;
-        }
-
-        /* HEADER */
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--blue);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-
-        .back {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            text-transform: uppercase;
-            transition: opacity 0.2s;
-        }
-
-        .back:hover {
-            opacity: 0.5;
-        }
-
-        /* TITLE */
-
-        .intro {
-            padding: 100px 0 80px;
-        }
-
-        .eyebrow {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: clamp(65px, 13vw, 190px);
-            line-height: 0.78;
-            letter-spacing: -0.095em;
-            font-weight: 700;
-            text-transform: uppercase;
-            overflow-wrap: anywhere;
-        }
-
-        .intro-description {
-            max-width: 500px;
-            margin-top: 45px;
-            font-size: clamp(16px, 2vw, 22px);
-            line-height: 1.5;
-            font-weight: 300;
-        }
-
-        /* SECTION */
-
-        .section-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 0;
-            border-top: 1px solid var(--blue);
-            border-bottom: 1px solid var(--blue);
-            margin-bottom: 45px;
-        }
-
-        .section-heading h2 {
-            font-size: 13px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .section-number {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-        }
-
-        /* PROJECT */
-
-        .project {
-            margin-bottom: 110px;
-        }
-
-        .project-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-            margin-bottom: 25px;
-        }
-
-        .project-title {
-            font-size: clamp(38px, 7vw, 90px);
-            font-weight: 600;
-            letter-spacing: -0.075em;
-            line-height: 0.95;
-            text-transform: uppercase;
-        }
-
-        .project-type {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-align: right;
-            line-height: 1.7;
-            flex-shrink: 0;
-        }
-
-        .specimen {
-            width: 100%;
-            min-height: 360px;
-            background: var(--blue);
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 35px;
-            overflow: hidden;
-        }
-
-        .specimen-label {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        .specimen-title {
-            font-size: clamp(65px, 15vw, 200px);
-            font-weight: 800;
-            letter-spacing: -0.105em;
-            line-height: 0.75;
-            overflow-wrap: anywhere;
-            text-transform: uppercase;
-        }
-
-        .specimen-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            gap: 20px;
-        }
-
-        .project-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 30px;
-        }
-
-        .project-description {
-            max-width: 500px;
-            color: var(--black);
-            font-size: 16px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .project-details {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            line-height: 2;
-            text-transform: uppercase;
-        }
-
-        /* FOOTER */
-
-        footer {
-            margin-top: 100px;
-            padding: 25px 0;
-            border-top: 1px solid var(--blue);
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        footer a:hover {
-            opacity: 0.5;
-        }
-
-        @media (max-width: 650px) {
-            .page {
-                padding: 22px 5%;
-            }
-
-            .intro {
-                padding: 80px 0 65px;
-            }
-
-            .project-top {
-                flex-direction: column;
-            }
-
-            .project-type {
-                text-align: left;
-            }
-
-            .specimen {
-                min-height: 260px;
-                padding: 22px;
-            }
-
-            .project-info {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            footer {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 
 <body>
@@ -286,7 +34,6 @@
                 ← BACK TO MAIN PAGE
             </a>
         </header>
-
 
         <main>
 
@@ -307,14 +54,12 @@
 
             </section>
 
-
             <section>
 
                 <div class="section-heading">
                     <h2>Selected projects</h2>
                     <span class="section-number">001 — 001</span>
                 </div>
-
 
                 <article class="project">
 
@@ -331,7 +76,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="specimen">
 
@@ -350,7 +94,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="project-info">
 
@@ -375,7 +118,6 @@
             </section>
 
         </main>
-
 
         <footer>
             <span>meme_lemon © 2026</span>
