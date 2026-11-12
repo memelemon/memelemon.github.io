@@ -1,7 +1,5 @@
 
-/* ---------------------------- */
 /* GENERAL */
-/* ---------------------------- */
 
 * {
     margin: 0;
@@ -32,9 +30,7 @@ a {
 }
 
 
-/* ---------------------------- */
 /* PAGE */
-/* ---------------------------- */
 
 .page {
     width: 100%;
@@ -44,15 +40,32 @@ a {
 }
 
 
-/* ---------------------------- */
+/* SHARED SECONDARY TEXT */
+
+.page .back,
+.page .eyebrow,
+.page .section-number,
+.page .project-type,
+.page .specimen-label,
+.page .specimen-bottom,
+.page .project-description,
+.page .font-download-info p,
+.page .font-license p,
+.page .font-license a,
+.page footer {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #D0D0D0;
+}
+
+
 /* HEADER */
-/* ---------------------------- */
 
 .page header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding-bottom: 22px;
     border-bottom: 1px solid #9EA8CA;
 }
@@ -64,9 +77,6 @@ a {
 }
 
 .page .back {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    color: #9EA8CA;
     transition: .2s ease;
 }
 
@@ -76,20 +86,14 @@ a {
 }
 
 
-/* ---------------------------- */
 /* INTRO */
-/* ---------------------------- */
 
 .page .intro {
     padding: 13vh 0 12vh;
 }
 
 .page .eyebrow {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 13px;
-    color: #9EA8CA;
     margin-bottom: 35px;
-    letter-spacing: .04em;
 }
 
 .page h1 {
@@ -104,51 +108,34 @@ a {
 .page .intro-description {
     max-width: 600px;
     margin-top: 65px;
-
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: clamp(18px, 2vw, 30px);
+    font-weight: 300;
     line-height: 1.35;
-
     color: #D0D0D0;
 }
 
 
-/* ---------------------------- */
 /* SECTION HEADING */
-/* ---------------------------- */
 
 .page .section-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 0;
-
     border-top: 1px solid #9EA8CA;
     border-bottom: 1px solid #9EA8CA;
-
     margin-bottom: 7vh;
 }
 
 .page .section-heading h2 {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 400;
     color: white;
-    text-transform: uppercase;
-}
-
-.page .section-number {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    color: #9EA8CA;
 }
 
 
-/* ---------------------------- */
 /* PROJECT */
-/* ---------------------------- */
 
 .page .project {
     margin-bottom: 15vh;
@@ -172,40 +159,20 @@ a {
     text-transform: uppercase;
 }
 
-.page .project-type {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    line-height: 1.8;
-    text-align: right;
-    color: #9EA8CA;
-}
 
-
-/* ---------------------------- */
 /* TYPE SPECIMEN */
-/* ---------------------------- */
 
 .page .specimen {
     width: 100%;
     min-height: 430px;
-
     padding: 35px;
-
     border: 1px solid white;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     overflow: hidden;
     background: transparent;
     color: white;
-}
-
-.page .specimen-label {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    color: #9EA8CA;
 }
 
 .page .specimen-title {
@@ -218,96 +185,22 @@ a {
     overflow-wrap: anywhere;
 }
 
-.page .specimen-bottom {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
 
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    color: #9EA8CA;
-}
-
-
-/* ---------------------------- */
 /* PROJECT INFORMATION */
-/* ---------------------------- */
 
 .page .project-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
     margin-top: 35px;
 }
 
 .page .project-description {
-    max-width: 550px;
-
-    font-family: "Inter", sans-serif;
+    max-width: 650px;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.6;
-
-    color: #D0D0D0;
-}
-
-.page .project-details {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    line-height: 2;
-    color: #9EA8CA;
 }
 
 
-/* ---------------------------- */
-/* PROJECT LINK */
-/* ---------------------------- */
-
-.page .project-link {
-    display: inline-block;
-    margin-top: 30px;
-
-    font-family: "Inter", sans-serif;
-    font-size: clamp(22px, 2.4vw, 40px);
-
-    color: #1B91FF;
-    transition: .2s ease;
-}
-
-.page .project-link:hover {
-    color: white;
-    transform: translateX(10px);
-}
-
-
-/* ---------------------------- */
-/* FOOTER */
-/* ---------------------------- */
-
-.page footer {
-    margin-top: 12vh;
-    padding: 25px 0;
-
-    border-top: 1px solid #9EA8CA;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    color: #9EA8CA;
-}
-
-.page footer a {
-    color: white;
-    transition: .2s ease;
-}
-
-.page footer a:hover {
-    opacity: .6;
-}
-
+/* FONT DOWNLOAD */
 
 .font-download {
     margin-top: 45px;
@@ -319,57 +212,66 @@ a {
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
-    color: white;
 }
 
 .font-download-info h3 {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 13px;
+    font-size: 25px;
     font-weight: 400;
     margin-bottom: 10px;
+    color: white;
 }
 
 .font-download-info p,
 .font-license p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     color: #D0D0D0;
 }
 
 .download-link {
     font-family: "IBM Plex Mono", monospace;
-    font-size: 15px;
+    font-size: clamp(22px, 2.4vw, 40px);
     color: white;
-    transition: opacity 0.2s;
+    transition: .2s ease;
 }
 
-.download-link:hover,
-.font-license a:hover {
-    opacity: 0.5;
-}
-
-.font-license {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    line-height: 1.8;
+.download-link:hover {
+    opacity: .5;
 }
 
 .font-license a {
     display: inline-block;
     margin-top: 8px;
-    color: #9EA8CA;
+    transition: .2s ease;
 }
 
-@media (max-width: 650px) {
-    .font-download {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.font-license a:hover {
+    color: white;
 }
 
-/* ---------------------------- */
+
+/* FOOTER */
+
+.page footer {
+    margin-top: 12vh;
+    padding: 25px 0;
+    border-top: 1px solid #9EA8CA;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.page footer a {
+    transition: .2s ease;
+}
+
+.page footer a:hover {
+    color: white;
+}
+
+
 /* MOBILE */
-/* ---------------------------- */
 
 @media (max-width: 900px) {
 
@@ -395,10 +297,6 @@ a {
         gap: 20px;
     }
 
-    .page .project-type {
-        text-align: left;
-    }
-
     .page .specimen {
         min-height: 300px;
         padding: 22px;
@@ -409,13 +307,31 @@ a {
     }
 
     .page .project-info {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .font-download {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page footer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .page .back {
+        font-size: 14px;
     }
 
     .page footer {
         flex-direction: column;
-        gap: 18px;
+        gap: 12px;
     }
 
+    .page .specimen {
+        min-height: 250px;
+    }
 }
