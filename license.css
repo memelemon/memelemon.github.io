@@ -24,7 +24,7 @@ a {
 .page {
     width: 100%;
     min-height: 100vh;
-    padding: 35px 5%;
+    padding: 30px 5%;
 }
 
 /* HEADER */
@@ -33,106 +33,84 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #9EA8CA;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: 700;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 19px;
+    font-weight: 500;
     letter-spacing: -1px;
 }
 
-.back {
+.back,
+footer {
     font-family: "IBM Plex Mono", monospace;
     font-size: 12px;
     text-transform: uppercase;
+}
+
+.back,
+footer a {
     transition: opacity 0.2s;
 }
 
-.back:hover {
+.back:hover,
+footer a:hover {
     opacity: 0.5;
 }
 
 /* INTRO */
 
 .intro {
-    padding: 100px 0 80px;
-}
-
-.eyebrow {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-    color: #9EA8CA;
-    margin-bottom: 25px;
+    padding: 100px 0 85px;
 }
 
 h1 {
     font-family: "IBM Plex Mono", monospace;
     font-size: clamp(65px, 13vw, 190px);
+    font-weight: 400;
     line-height: 0.82;
     letter-spacing: -0.095em;
-    font-weight: 400;
 }
 
-.intro-description {
-    margin-top: 40px;
-    font-size: clamp(16px, 2vw, 22px);
+.intro p {
+    margin-top: 35px;
+    font-size: 18px;
     font-weight: 300;
-    color: #D0D0D0;
+    color: #D0D8EE;
 }
 
-/* LICENSE */
+/* LICENSE CONTENT */
 
 .license-content {
-    max-width: 850px;
-    margin-bottom: 100px;
-}
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 0;
-    border-top: 1px solid #9EA8CA;
-    border-bottom: 1px solid #9EA8CA;
-    margin-bottom: 45px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
-}
-
-.section-heading h2 {
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.section-heading span {
-    color: #9EA8CA;
+    max-width: 760px;
+    padding-bottom: 80px;
 }
 
 .license-section {
-    margin-bottom: 55px;
+    padding: 27px 0;
+    border-top: 1px solid rgba(255,255,255,0.35);
 }
 
-.license-section h3 {
+.license-section h2 {
+    margin-bottom: 17px;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    color: #9EA8CA;
-    margin-bottom: 20px;
 }
 
 .license-section p,
 .license-section li {
-    max-width: 650px;
-    font-size: 16px;
-    font-weight: 300;
+    max-width: 620px;
+    font-size: 15px;
     line-height: 1.8;
-    color: white;
+    font-weight: 300;
 }
 
 .license-section p + p {
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .license-section ul {
@@ -141,54 +119,41 @@ h1 {
 
 .license-section li {
     position: relative;
-    padding-left: 22px;
-    margin-bottom: 12px;
+    padding-left: 20px;
+    margin-bottom: 8px;
 }
 
 .license-section li::before {
     content: "—";
     position: absolute;
     left: 0;
-    color: #9EA8CA;
-}
-
-.license-section strong {
-    font-weight: 600;
 }
 
 .credit {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 20px;
-    border: 1px solid #9EA8CA;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 14px;
+    font-size: 14px !important;
+    color: #D0D8EE;
 }
 
-.license-footer {
-    padding-top: 25px;
-    border-top: 1px solid #9EA8CA;
+/* FINAL NOTE */
+
+.final-note {
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,0.4);
     font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    color: #9EA8CA;
+    font-size: clamp(16px, 2.5vw, 26px);
+    letter-spacing: -1px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 100px;
-    padding: 25px 0;
-    border-top: 1px solid #9EA8CA;
+    margin-top: 70px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.4);
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-footer a:hover {
-    opacity: 0.5;
 }
 
 /* MOBILE */
@@ -209,6 +174,7 @@ footer a:hover {
     }
 
     footer {
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 18px;
     }
 }
