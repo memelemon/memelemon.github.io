@@ -181,11 +181,11 @@ a {
 }
 
 .page .specimen-title {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Street Antique", sans-serif;
     font-size: clamp(65px, 15vw, 200px);
     font-weight: 400;
-    letter-spacing: -.1em;
-    line-height: .78;
+    letter-spacing: 0;
+    line-height: .85;
     color: white;
     overflow-wrap: anywhere;
 }
