@@ -1,147 +1,66 @@
-
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio — meme_lemon</title>
-
-    <meta name="description"
-        content="Portfolio of meme_lemon — concept and mixed media artist.">
-
+    <meta name="description" content="Selected visual work, 3D renders, experiments and design by meme_lemon.">
     <meta name="author" content="meme_lemon">
+    <title>Portfolio — meme_lemon</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
 </head>
-
 <body>
-
     <div class="page">
-
-        <header>
+        <header class="site-header">
             <a class="logo" href="index.html">meme_lemon</a>
-
-            <a class="back" href="index.html">
-                ← BACK
-            </a>
+            <a class="back-link" href="index.html">← MAIN PAGE</a>
         </header>
 
         <main>
-
             <section class="intro">
-
-                <div class="eyebrow">
-                    SELECTED WORKS
-                </div>
-
-                <h1>
-                    PORT<br>FOLIO
-                </h1>
-
-                <p class="intro-description">
-                    A collection of experiments, visual concepts
-                    and mixed media projects by meme_lemon.
-                </p>
-
+                <p class="eyebrow">SELECTED WORKS / 2026</p>
+                <h1 class="page-title">PORTFOLIO</h1>
+                <p class="intro-description">Visual work, experiments and design by meme_lemon.</p>
             </section>
 
-            <section>
+            <nav class="category-list" aria-label="Portfolio categories">
+                <a class="category-card" href="renders.html">
+                    <span class="category-index">01</span>
+                    <span class="category-copy">
+                        <span class="category-title">RENDERS</span>
+                        <span class="category-description">Selected 3D renders and digital imagery</span>
+                    </span>
+                    <span class="category-arrow" aria-hidden="true">↗</span>
+                </a>
 
-                <div class="section-heading">
-                    <h2>Selected projects</h2>
-                </div>
+                <a class="category-card" href="experiments.html">
+                    <span class="category-index">02</span>
+                    <span class="category-copy">
+                        <span class="category-title">EXPERIMENTS</span>
+                        <span class="category-description">Visual studies, mixed media and moving image</span>
+                    </span>
+                    <span class="category-arrow" aria-hidden="true">↗</span>
+                </a>
 
-                <article class="project">
-
-                    <div class="project-top">
-
-                        <h2 class="project-title">
-                            Street<br>Antique
-                        </h2>
-
-                    </div>
-
-                    <div class="specimen">
-
-                        <div class="specimen-title">
-                            STREET<br>
-                            ANTIQUE
-                        </div>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <p class="project-description">
-                            Street Antique is an experimental display
-                            typeface developed by meme_lemon.
-                            An exploration of form, lettering and
-                            unconventional typography.
-                        </p>
-
-                        <div class="font-download">
-
-                            <div class="font-download-info">
-                                <h3>GET THE FONT</h3>
-
-                                <p>
-                                    Free for personal and commercial use.
-                                    Attribution required.
-                                </p>
-                            </div>
-
-                            <a class="download-link"
-                                href="fonts/Street Antique - typeface by meme_lemon.zip" download>
-                                DOWNLOAD .TTF
-                            </a>
-
-                            <div class="font-license">
-
-                                <p>
-                                    Please don't resell or modify the font
-                                    without permission.
-                                </p>
-
-                                <a href="street-antique-license.html">
-                                    READ LICENSE
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </section>
-
+                <a class="category-card" href="design.html">
+                    <span class="category-index">03</span>
+                    <span class="category-copy">
+                        <span class="category-title">DESIGN</span>
+                        <span class="category-description">Typefaces, posters and graphic projects</span>
+                    </span>
+                    <span class="category-arrow" aria-hidden="true">↗</span>
+                </a>
+            </nav>
         </main>
 
-        <footer>
-
+        <footer class="site-footer">
             <span>meme_lemon © 2026</span>
-
-            <a href="socials.html">
-                SOCIALS
-            </a>
-
-            <a href="index.html">
-                MAIN PAGE
-            </a>
-
+            <a href="socials.html">SOCIALS</a>
+            <a href="index.html">MAIN PAGE</a>
         </footer>
-
     </div>
-
 </body>
 </html>
