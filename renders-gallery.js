@@ -28,11 +28,11 @@
         lightboxImage.alt = niceName(work.name);
         title.textContent = niceName(work.name);
         counter.textContent = String(activeIndex + 1).padStart(2, "0") + " / " + String(works.length).padStart(2, "0");
+        lastFocus = document.activeElement;
         lightbox.classList.add("is-open");
         lightbox.setAttribute("aria-hidden", "false");
         document.body.classList.add("lightbox-open");
         closeButton.focus();
-        lastFocus = document.activeElement === closeButton ? lastFocus : document.activeElement;
         lightboxImage.onload = () => lightboxImage.classList.add("is-visible");
         if (lightboxImage.complete) lightboxImage.classList.add("is-visible");
     }
