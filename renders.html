@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="renders-gallery.css">
 </head>
 <body>
     <div class="page">
@@ -28,13 +29,11 @@
 
             <section class="collection">
                 <div class="section-heading">
-                    <h2>SELECTED RENDERS</h2>
-                    <span>01 — 3D / DIGITAL</span>
+                    <h2>ARTWORKS</h2>
+                    <span>3D / DIGITAL</span>
                 </div>
-                <div class="empty-collection">
-                    <p class="empty-title">THE COLLECTION IS BEING ASSEMBLED.</p>
-                    <p>Selected renders will appear here.</p>
-                </div>
+                <div id="renders-field" class="renders-field" aria-label="Artwork collection"></div>
+                <p id="render-status" class="render-status" aria-live="polite">LOADING WORKS...</p>
             </section>
         </main>
 
@@ -44,5 +43,24 @@
             <a href="portfolio.html">PORTFOLIO</a>
         </footer>
     </div>
+
+    <div id="render-lightbox" class="render-lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" aria-hidden="true">
+        <div class="lightbox-top">
+            <span id="lightbox-title">ARTWORK</span>
+            <div class="lightbox-controls">
+                <button id="lightbox-prev" class="lightbox-button" type="button" aria-label="Previous artwork">←</button>
+                <button id="lightbox-next" class="lightbox-button" type="button" aria-label="Next artwork">→</button>
+                <button id="lightbox-close" class="lightbox-button" type="button" aria-label="Close viewer">×</button>
+            </div>
+        </div>
+        <div class="lightbox-stage">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        </div>
+        <div class="lightbox-bottom">
+            <span id="lightbox-counter">01 / 01</span>
+            <span class="lightbox-hint">ESC TO CLOSE · ← → TO NAVIGATE</span>
+        </div>
+    </div>
+    <script src="renders-gallery.js"></script>
 </body>
 </html>
