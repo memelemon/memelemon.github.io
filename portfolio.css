@@ -224,15 +224,43 @@ a {
     line-height: 1.65;
 }
 
+.design-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
+    align-items: stretch;
+    gap: 0;
+    min-height: 520px;
+    margin-top: 55px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
 .specimen {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 450px;
-    margin-top: 55px;
+    min-width: 0;
+    min-height: 520px;
     padding: 28px;
-    border: 1px solid white;
     overflow: hidden;
+}
+
+.design-poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 24px;
+    border-left: 1px solid white;
+    background: rgba(0, 0, 0, .06);
+}
+
+.design-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+    object-fit: contain;
 }
 
 .specimen-label,
@@ -352,9 +380,24 @@ a {
         font-size: 14px;
     }
 
+    .design-showcase {
+        grid-template-columns: 1fr;
+    }
+
     .specimen {
         min-height: 330px;
         padding: 20px;
+    }
+
+    .design-poster {
+        min-height: 380px;
+        padding: 20px;
+        border-left: 0;
+        border-top: 1px solid white;
+    }
+
+    .design-poster img {
+        max-height: 560px;
     }
 
     .design-actions {
@@ -419,6 +462,11 @@ a {
 
     .specimen {
         min-height: 250px;
+    }
+
+    .design-poster {
+        min-height: 300px;
+        padding: 14px;
     }
 
     .specimen-title {
