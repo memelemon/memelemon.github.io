@@ -145,18 +145,6 @@ a {
     line-height: 1.5;
 }
 
-.category-arrow {
-    justify-self: end;
-    font-size: 30px;
-    color: #9EA8CA;
-    transition: transform .2s ease, color .2s ease;
-}
-
-.category-card:hover .category-arrow {
-    color: white;
-    transform: translate(4px, -4px);
-}
-
 .collection {
     margin-top: 2vh;
 }
