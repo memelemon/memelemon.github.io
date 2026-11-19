@@ -15,101 +15,85 @@ html {
 }
 
 body {
-
     background: #315FC2;
-
     overflow-x: hidden;
     overflow-y: auto;
-
     font-family: "Inter", sans-serif;
-
 }
 
-
-/* ---------------------------- */
-/* HERO */
-/* ---------------------------- */
+/* HOME */
 
 .hero {
-    position: relative;
     width: 100%;
-    min-height: 100svh;
     min-height: 100vh;
-    padding: 5vh 3vw 8vh;
+    min-height: 100svh;
+    padding: 4.5vh 4vw 5vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 5vh;
+    align-items: flex-start;
 }
-
-/* ABOUT */
 
 .about {
     align-self: flex-end;
-    max-width: 42%;
 }
 
 .about p {
     font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(16px, 1.7vw, 30px);
+    font-size: clamp(18px, 1.7vw, 34px);
     line-height: 1.25;
     color: #9EA8CA;
 }
 
-/* TITLE */
-
 .title {
     width: 100%;
-    max-width: 100%;
-    margin-top: auto;
+    margin-top: clamp(100px, 16vh, 210px);
+    margin-left: -1vw;
 }
 
 .im {
     font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(54px, 7vw, 120px);
+    font-size: clamp(60px, 8vw, 150px);
     color: white;
     letter-spacing: -0.05em;
-    line-height: .85;
+    line-height: 0.85;
 }
 
 h1 {
     max-width: 100%;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
-    font-size: clamp(58px, 10vw, 190px);
+    font-size: clamp(64px, 12vw, 220px);
     letter-spacing: -0.075em;
-    line-height: .9;
+    line-height: 0.95;
     color: white;
     white-space: nowrap;
 }
 
 h2 {
-    margin-top: clamp(18px, 3vh, 42px);
     max-width: 100%;
+    margin-top: clamp(24px, 4vh, 52px);
     font-family: "Inter", sans-serif;
     font-weight: 300;
-    font-size: clamp(18px, 2.4vw, 42px);
+    font-size: clamp(20px, 2.5vw, 48px);
     line-height: 1.2;
     color: #D0D0D0;
     letter-spacing: -0.02em;
 }
-
-/* MAIN LINKS */
 
 .mainLinks {
     position: static;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.2vh;
-    margin-top: 1vh;
+    gap: clamp(10px, 1.5vh, 20px);
+    margin-top: clamp(32px, 5vh, 64px);
 }
 
 .socialButton {
     display: block;
     text-decoration: none;
     font-family: "Inter", sans-serif;
-    font-size: clamp(20px, 2.2vw, 38px);
+    font-size: clamp(24px, 2.4vw, 48px);
     color: #1B91FF;
     transition: .2s ease;
 }
@@ -160,162 +144,110 @@ h2 {
     user-select: none;
 }
 
-/* MOBILE AND TABLET */
+/* MOBILE */
 
 @media (max-width: 900px) {
     .hero {
-        min-height: 100svh;
         min-height: 100vh;
-        padding: 6vw 6vw 11vh;
-        gap: 5vh;
-        justify-content: flex-start;
+        min-height: 100svh;
+        padding: 5vw 6vw 12vh;
     }
 
     .about {
         align-self: flex-start;
-        max-width: 100%;
     }
 
     .about p {
-        font-size: clamp(16px, 4vw, 25px);
+        font-size: clamp(16px, 4vw, 22px);
     }
 
     .title {
-        margin-top: auto;
+        width: 100%;
+        margin-top: clamp(105px, 14vh, 165px);
+        margin-left: 0;
     }
 
     .im {
-        font-size: clamp(54px, 13vw, 100px);
+        font-size: clamp(58px, 14vw, 86px);
     }
 
     h1 {
-        font-size: clamp(42px, 11.5vw, 104px);
+        width: 100%;
+        font-size: clamp(46px, 11vw, 88px);
+        line-height: .98;
+        letter-spacing: -.075em;
         white-space: normal;
         overflow-wrap: anywhere;
-        line-height: .92;
-        letter-spacing: -.075em;
     }
 
     h2 {
-        margin-top: 5vw;
-        font-size: clamp(16px, 4.2vw, 28px);
+        max-width: 90%;
+        margin-top: 7vw;
+        font-size: clamp(17px, 4.5vw, 25px);
         line-height: 1.25;
-        overflow-wrap: break-word;
     }
 
     .mainLinks {
-        margin-top: 2vw;
-        gap: 1.5vw;
+        margin-top: clamp(30px, 6vh, 54px);
+        gap: 2vw;
     }
 
     .socialButton {
-        font-size: clamp(18px, 5vw, 30px);
+        font-size: clamp(20px, 5vw, 27px);
     }
 
     .visitor-counter {
         right: 4vw;
-        bottom: 2.5vw;
+        bottom: 3vw;
         gap: .7rem;
     }
 
     .eye-icon {
-        width: 42px;
+        width: 55px;
     }
 
     #visitorCount {
-        font-size: 22px;
+        font-size: 25px;
     }
 }
 
-/* SMALL PHONES */
-
-@media (max-width: 380px) {
-    .hero {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    h1 {
-        font-size: 11vw;
-    }
-
-    h2 {
-        font-size: 4vw;
-    }
-}
-
-/* ---------------------------- */
 /* SOCIAL PAGE */
-/* ---------------------------- */
 
 .social-page {
-
-    width: 100vw;
-
+    width: 100%;
     min-height: 100vh;
-
     background: #315FC2;
-
     padding-left: 6vw;
-
     padding-top: 5vh;
-
 }
-
 
 .social-title {
-
     font-family: "IBM Plex Mono", monospace;
-
     font-size: clamp(70px, 10vw, 180px);
-
     color: white;
-
     letter-spacing: -0.08em;
-
     line-height: 0.8;
-
     white-space: nowrap;
-
 }
-
 
 .social-links {
-
     margin-top: 6vh;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 1.8vh;
-
 }
-
 
 .social-links a {
-
     font-family: "IBM Plex Mono", monospace;
-
     font-size: clamp(28px, 3vw, 65px);
-
     color: white;
-
     text-decoration: none;
-
     letter-spacing: -0.05em;
-
     display: block;
-
     transition: transform .25s ease, opacity .25s ease;
-
 }
 
-
 .social-links a:hover {
-
     transform: translateX(20px);
-
     opacity: .7;
-
 }
