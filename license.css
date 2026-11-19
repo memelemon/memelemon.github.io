@@ -51,7 +51,7 @@ header {
 }
 
 .back {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     text-transform: uppercase;
 }
@@ -125,7 +125,7 @@ h1 {
 }
 
 .credit {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "Inter", sans-serif;
     font-size: 14px !important;
     color: #D0D8EE;
 }
