@@ -31,137 +31,85 @@ body {
 /* ---------------------------- */
 
 .hero {
-
     position: relative;
-
-    width: 100vw;
-
-    /*
-        Первый холст теперь длиннее обычного экрана.
-        Контент остаётся наверху,
-        а снизу появляется большое пустое пространство.
-    */
-
-    min-height: 140vh;
-
+    width: 100%;
+    min-height: 100svh;
+    min-height: 100vh;
+    padding: 5vh 3vw 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5vh;
 }
 
-
-/* ---------------------------- */
 /* ABOUT */
-/* ---------------------------- */
 
 .about {
-
-    position: absolute;
-
-    top: 4.5vh;
-    right: 4vw;
-
+    align-self: flex-end;
+    max-width: 42%;
 }
 
 .about p {
-
     font-family: "IBM Plex Mono", monospace;
-
-    font-size: clamp(18px, 1.7vw, 34px);
-
+    font-size: clamp(16px, 1.7vw, 30px);
     line-height: 1.25;
-
     color: #9EA8CA;
-
 }
 
-
-/* ---------------------------- */
 /* TITLE */
-/* ---------------------------- */
 
 .title {
-
-    position: absolute;
-
-    left: 3vw;
-    top: 8vh;
-
+    width: 100%;
+    max-width: 100%;
+    margin-top: auto;
 }
 
 .im {
-
     font-family: "IBM Plex Mono", monospace;
-
-    font-size: clamp(60px, 8vw, 150px);
-
+    font-size: clamp(54px, 7vw, 120px);
     color: white;
-
     letter-spacing: -0.05em;
-
-    line-height: 0.85;
-
+    line-height: .85;
 }
 
 h1 {
-
+    max-width: 100%;
     font-family: "IBM Plex Mono", monospace;
-
     font-weight: 400;
-
-    font-size: clamp(120px, 15vw, 330px);
-
-    letter-spacing: -0.06em;
-
-    line-height: 0.82;
-
+    font-size: clamp(58px, 10vw, 190px);
+    letter-spacing: -0.075em;
+    line-height: .9;
     color: white;
-
     white-space: nowrap;
-
-    transform: translateY(2vh);
-
 }
 
 h2 {
-
-    margin-top: 8vh;
-
+    margin-top: clamp(18px, 3vh, 42px);
+    max-width: 100%;
     font-family: "Inter", sans-serif;
-
     font-weight: 300;
-
-    font-size: clamp(24px, 2.5vw, 58px);
-
+    font-size: clamp(18px, 2.4vw, 42px);
+    line-height: 1.2;
     color: #D0D0D0;
-
     letter-spacing: -0.02em;
-
 }
 
-
-/* ---------------------------- */
-/* SOCIAL BUTTON */
-/* ---------------------------- */
+/* MAIN LINKS */
 
 .mainLinks {
-    position: absolute;
-
-    left: 3vw;
-    bottom: 50vh;
-
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2vh;
+    gap: 1.2vh;
+    margin-top: 1vh;
 }
 
 .socialButton {
-    position: static;
-
     display: block;
     text-decoration: none;
-
     font-family: "Inter", sans-serif;
-    font-size: clamp(26px, 2.4vw, 55px);
-
+    font-size: clamp(20px, 2.2vw, 38px);
     color: #1B91FF;
     transition: .2s ease;
 }
@@ -179,176 +127,122 @@ h2 {
     color: white;
 }
 
-
-/* ---------------------------- */
 /* VISITOR COUNTER */
-/* ---------------------------- */
 
 .visitor-counter {
-
     position: fixed;
-
     right: 2.5vw;
     bottom: 3vh;
-
     display: flex;
-
     align-items: center;
-
     gap: 1.2rem;
-
     z-index: 1000;
-
     opacity: .75;
-
     transition: .25s;
-
 }
 
 .visitor-counter:hover {
-
     opacity: 1;
-
 }
 
 .eye-icon {
-
     width: 90px;
-
     height: auto;
-
     flex-shrink: 0;
-
 }
 
 #visitorCount {
-
     font-family: "Inter", sans-serif;
-
     font-size: 42px;
-
     font-weight: 300;
-
     color: #9EA8CA;
-
     letter-spacing: -0.03em;
-
     user-select: none;
-
 }
 
-
-/* ---------------------------- */
-/* MOBILE */
-/* ---------------------------- */
+/* MOBILE AND TABLET */
 
 @media (max-width: 900px) {
-
-
-    /* HERO */
-
     .hero {
-
-        min-height: 125vh;
-
-        padding: 0;
-
+        min-height: 100svh;
+        min-height: 100vh;
+        padding: 6vw 6vw 11vh;
+        gap: 5vh;
+        justify-content: flex-start;
     }
 
-
-    /* ABOUT */
-
     .about {
-
-        left: 6vw;
-
-        right: auto;
-
-        top: 6vw;
-
+        align-self: flex-start;
+        max-width: 100%;
     }
 
     .about p {
-
-        font-size: 4vw;
-
+        font-size: clamp(16px, 4vw, 25px);
     }
 
-
-    /* TITLE */
-
     .title {
-
-        left: 6vw;
-
-        top: 18vh;
-
+        margin-top: auto;
     }
 
     .im {
-
-        font-size: 14vw;
-
+        font-size: clamp(54px, 13vw, 100px);
     }
 
     h1 {
-
-        font-size: 22vw;
-
+        font-size: clamp(42px, 11.5vw, 104px);
         white-space: normal;
-
-        line-height: .9;
-
-        transform: translateY(0);
-
+        overflow-wrap: anywhere;
+        line-height: .92;
+        letter-spacing: -.075em;
     }
 
     h2 {
-
-        font-size: 5vw;
-
-        margin-top: 8vw;
-
+        margin-top: 5vw;
+        font-size: clamp(16px, 4.2vw, 28px);
+        line-height: 1.25;
+        overflow-wrap: break-word;
     }
 
+    .mainLinks {
+        margin-top: 2vw;
+        gap: 1.5vw;
+    }
 
-    /* SOCIAL BUTTON */
-.mainLinks {
-    left: 6vw;
-    bottom: 7vw;
-    gap: 2vw;
-}
-
-.socialButton {
-    font-size: 6vw;
-}
-
-    /* COUNTER */
+    .socialButton {
+        font-size: clamp(18px, 5vw, 30px);
+    }
 
     .visitor-counter {
-
         right: 4vw;
-
-        bottom: 3vw;
-
+        bottom: 2.5vw;
         gap: .7rem;
-
     }
 
     .eye-icon {
-
-        width: 55px;
-
+        width: 42px;
     }
 
     #visitorCount {
-
-        font-size: 25px;
-
+        font-size: 22px;
     }
-
 }
 
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+    .hero {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    h1 {
+        font-size: 11vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+}
 
 /* ---------------------------- */
 /* SOCIAL PAGE */
